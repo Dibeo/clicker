@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Hut",
+    "price": 100,
+    "add_on": 5
+  },
+  {
+    "name": "Holding",
+    "price": 10000000,
+    "add_on": 500000
+  }
+]
