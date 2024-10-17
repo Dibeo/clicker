@@ -45,11 +45,11 @@ export default function MainContent() {
   };
 
   return (
-    <Card className="card" sx={{ width: "60%" }}>
-      <Typography variant="h5">Cookie Clicker</Typography>
+    <Card className="card" sx={{ width: "fit-content", padding:"55px"}}>
+      <Typography variant="h3">Cookie Clicker</Typography>
       <img src={logo} alt="Cookie logo" className="cookie-image" />
 
-      <Typography variant="h6">Cookies: {cookiesCount}</Typography>
+      <Typography variant="h6" style={{marginBottom:"15px"}}>Cookies: {cookiesCount}</Typography>
 
       <Button
         variant="contained"

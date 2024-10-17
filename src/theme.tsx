@@ -1,4 +1,3 @@
-import React from "react";
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
@@ -25,18 +24,19 @@ const theme = createTheme({
     dark: {
       palette: {
         primary: {
-          main: "#FFFFFF", // Couleur principale dans le thème sombre (bleu)
+          main: "#1976D2",
         },
         secondary: {
-          main: "#FFC300", // Couleur secondaire dans le thème sombre (jaune doré)
+          main: "#f50057",
         },
         background: {
-          default: "#252525", // Fond par défaut en mode sombre (presque noir)
-          paper: "#1E1E1E", // Fond des cartes ou des éléments comme ListItem (gris foncé)
+          default: "#252525",
+          paper: "#3d3d3d",
         },
         text: {
-          primary: "#FFFFFF", // Texte principal en blanc pour le contraste
-          secondary: "#BBBBBB", // Texte secondaire gris clair
+          primary: "rgba(177,177,177,0.87)",
+          secondary: "rgba(142,141,141,0.87)",
+          disabled: "rgba(206,206,206,0.38)",
         },
       },
     },

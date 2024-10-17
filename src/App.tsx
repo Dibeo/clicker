@@ -1,3 +1,4 @@
+/**   App.tsx  */
 import React from "react";
 import "./App.css";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
@@ -17,7 +18,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" style={{marginBottom:"3%"}}>
           <NavigationBar expanded={expanded} onToggle={handleToggle}/>
         </header>
         <Draw expanded={expanded}/>

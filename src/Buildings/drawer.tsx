@@ -1,3 +1,4 @@
+/**   drawer.tsx   */
 import React, { useEffect, useState } from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import "./drawer.css";
@@ -44,7 +45,7 @@ const Draw: React.FC<SommaireProps> = ({ expanded }) => {
       style={{
         position: "fixed",
         left: expanded ? 0 : "-20%",
-        width: "20%",
+        width: "fit-content",
         height: "100%",
         boxShadow: "2px 0px 5px rgba(0,0,0,0.5)",
         transition: "left 0.3s ease",
@@ -53,17 +54,21 @@ const Draw: React.FC<SommaireProps> = ({ expanded }) => {
       }}
     >
       <List
+        className="List"
         style={{
           paddingTop: "70px",
         }}
       >
         {buildings
-          .sort((a, b) => a.price - b.price) // Trie par prix croissant
+          .sort((a, b) => a.price - b.price)
           .map((building) => (
-            <ListItem key={building.name} component="button">
+            <ListItem
+              key={building.name}
+              component="button"
+              className="ListItem"
+            >
               <ListItemText
                 primary={building.name}
-                // Remplacer les $ par des images de cookie
                 secondary={
                   <>
                     Price:

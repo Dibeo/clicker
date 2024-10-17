@@ -1,3 +1,4 @@
+/**		app-bar.tsx	 */
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -111,7 +112,7 @@ const NavigationBar: React.FC<ToolbarProps> = ({ expanded, onToggle }) => {
 
   return (
     <Box sx={{ flexGrow: 1, width: "100%" }}>
-      <AppBar position="sticky">
+      <AppBar position="sticky" color="primary" enableColorOnDark>
         <Toolbar>
           <IconButton
             size="large"
