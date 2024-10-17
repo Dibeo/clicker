@@ -1,19 +1,26 @@
 import React from "react";
-import PrimarySearchAppBar from "./App-bar/app-bar";
 import "./App.css";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import MainContent from "./Main/main";
 import theme from "./theme";
-import Draw from "./Buildings/buildings";
+import NavigationBar from "./App-bar/app-bar";
+import Draw from "./Buildings/drawer";
 
-function App() {
+
+const App: React.FC = () => {
+  const [expanded, setExpanded] = React.useState<boolean>(false);
+
+  const handleToggle = () => {
+    setExpanded((prev) => !prev);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
-          <PrimarySearchAppBar />
+          <NavigationBar expanded={expanded} onToggle={handleToggle}/>
         </header>
-        <Draw />
+        <Draw expanded={expanded}/>
         <article className="App-main-content">
           <MainContent />
         </article>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,7 +13,12 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 
-export default function PrimarySearchAppBar() {
+interface ToolbarProps {
+  expanded: boolean;
+  onToggle: () => void;
+}
+
+const NavigationBar: React.FC<ToolbarProps> = ({ expanded, onToggle }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -60,17 +64,6 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
-
-  let expanded: boolean =
-    localStorage.getItem("menu_expand")?.toLowerCase() == "true"
-      ? true
-      : false;
-
-  const click_menu = () => {
-    expanded = !expanded;
-    console.log(expanded);
-    localStorage.setItem("menu_expand", expanded.toString());
-  };
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
@@ -126,7 +119,7 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
-            onClick={click_menu}
+            onClick={onToggle}
           >
             {expanded ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
@@ -179,4 +172,6 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </Box>
   );
-}
+};
+
+export default NavigationBar;

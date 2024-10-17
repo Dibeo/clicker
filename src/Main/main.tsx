@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button, Card, Typography } from "@mui/material";
 import logo from "../cookie512.png";
 import "./main.css";
