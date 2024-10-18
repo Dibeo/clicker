@@ -1,6 +1,7 @@
 {
   "name": "clicker",
   "version": "0.1.0",
+  "homepage": "https://dibeo.github.io/clicker/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
