@@ -1,4 +1,4 @@
-[
+export const builds = () => { return [
   {
     "name": "Cottage",
     "price": 100,
@@ -420,3 +420,4 @@
     "add_on": 100000
   }
 ]
+};

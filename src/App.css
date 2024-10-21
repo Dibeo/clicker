@@ -26,7 +26,6 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 /* Thème clair (par défaut) */
