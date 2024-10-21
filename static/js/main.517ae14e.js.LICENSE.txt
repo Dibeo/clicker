@@ -1,9 +1,4 @@
-/*!
- * cookie
- * Copyright(c) 2012-2014 Roman Shtylman
- * Copyright(c) 2015 Douglas Christopher Wilson
- * MIT Licensed
- */
+/*! js-cookie v3.0.5 | MIT */
 
 /**
  * @license React
@@ -56,7 +51,7 @@
  */
 
 /**
- * @mui/styled-engine v6.1.3
+ * @mui/styled-engine v6.1.4
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
