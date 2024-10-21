@@ -1,4 +1,4 @@
-import { colors, List, ListItem, ListItemText } from "@mui/material";
+import { colors, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { builds } from "../data/buildings";
 
@@ -20,7 +20,7 @@ const Aside: React.FC = () => {
       {builds()
         .sort((a, b) => a.price - b.price)
         .map((building) => (
-          <ListItem key={building.name} component="button" className="ListItem">
+          <ListItemButton key={building.name} className="ListItem" style={{borderRadius:"15px", marginBottom:"3px"}}>
             <ListItemText style={{color: "#1B5299"}}
               primary={building.name}
               secondary={
@@ -41,7 +41,7 @@ const Aside: React.FC = () => {
                 </>
               }
             />
-          </ListItem>
+          </ListItemButton>
         ))}
     </List>
   );
