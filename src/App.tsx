@@ -2,11 +2,10 @@
 import React from "react";
 import "./App.css";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import MainContent from "./Main/main";
+import MainContent from "./Content/main";
 import theme from "./theme";
 import NavigationBar from "./App-bar/app-bar";
-import Draw from "./Buildings/drawer";
-
+import Aside from "./Content/Aside";
 
 const App: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean>(false);
@@ -18,16 +17,14 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <header className="App-header" style={{marginBottom:"3%"}}>
-          <NavigationBar expanded={expanded} onToggle={handleToggle}/>
+        <header style={{ marginBottom: "3%" }}>
+          <NavigationBar expanded={expanded} onToggle={handleToggle} />
         </header>
-        <Draw expanded={expanded}/>
-        <article className="App-main-content">
-          <MainContent />
-        </article>
+        <Aside />
+        <MainContent />
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
