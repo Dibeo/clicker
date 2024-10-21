@@ -32,9 +32,6 @@ const Aside: React.FC = () => {
   return (
     <List
       className="List"
-      style={{
-        paddingTop: "70px",
-      }}
     >
       {buildings
         .sort((a, b) => a.price - b.price)
