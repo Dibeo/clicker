@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemText } from "@mui/material";
+import { colors, List, ListItem, ListItemText } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { builds } from "../data/buildings";
 
@@ -21,7 +21,7 @@ const Aside: React.FC = () => {
         .sort((a, b) => a.price - b.price)
         .map((building) => (
           <ListItem key={building.name} component="button" className="ListItem">
-            <ListItemText
+            <ListItemText style={{color: "#FF5733"}}
               primary={building.name}
               secondary={
                 <>
