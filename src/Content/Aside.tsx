@@ -21,18 +21,17 @@ const Aside: React.FC = () => {
         .sort((a, b) => a.price - b.price)
         .map((building) => (
           <ListItem key={building.name} component="button" className="ListItem">
-            <ListItemText style={{color: "#FF5733"}}
+            <ListItemText style={{color: "#1B5299"}}
               primary={building.name}
               secondary={
                 <>
-                  Price:
+                  Price:{" "}
                   {building.price.toLocaleString()}
                   <img
                     src={cookieImage}
                     alt="cookie"
                     style={{ width: "20px", verticalAlign: "middle" }}
-                  />{" "}
-                  , Add-on:
+                  /><br/>Add-on:{" "}
                   {building.add_on.toLocaleString()}
                   <img
                     src={cookieImage}

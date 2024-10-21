@@ -17,7 +17,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <header style={{ marginBottom: "3%" }}>
+        <header>
           <NavigationBar expanded={expanded} onToggle={handleToggle} />
         </header>
         <Aside />
