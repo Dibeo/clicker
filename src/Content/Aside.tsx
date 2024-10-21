@@ -11,7 +11,7 @@ const Aside: React.FC = () => {
   const [buildings, setBuildings] = useState<Building[]>([]); // Typage de l'état
 
   // Importer l'image du cookie depuis le dossier public
-  const cookieImage = "/logo192.png";
+  const cookieImage = "logo192.png";
 
   // Fonction pour charger les données à partir du fichier JSON
   const fetchBuildings = async () => {
